@@ -1,0 +1,239 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #fa9f31 0%, #ffffff 50%, #138808 100%);
+  animation: backgroundAnimation 10s infinite alternate;
+}
+
+
+
+.top-controls {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+  background-color: transparent;
+  z-index: 1000;
+  animation: slideIn 0.5s ease-out;
+}
+
+/* Slide-in effect for top controls */
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.top-controls button {
+  background: #ff9933;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  animation: bounce 2s infinite;
+}
+
+
+.top-controls button:hover {
+  background: #e64f29;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #017031;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Fade-in animation for navbar */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  flex: 1;
+}
+
+.navbar ul li {
+  margin: 0 20px;
+  transition: transform 0.3s;
+}
+
+.navbar ul li:hover {
+  transform: scale(1.1);
+}
+
+/* Hover effect for navbar items */
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #ff9933;
+  transform: scale(1.2);
+}
+
+#post-story-section {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  animation: slideUp 0.5s ease-out;
+}
+
+/* Slide-up animation for post section */
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#post-story-section h1 {
+  color: #017031;
+  margin-bottom: 20px;
+  animation: fadeInText 1s ease-out;
+}
+
+/* Text fade-in animation */
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#post-story-section p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 30px;
+  animation: fadeInText 1.5s ease-out;
+}
+
+.story-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeInForm 1.5s ease-out;
+}
+
+/* Form fade-in animation */
+@keyframes fadeInForm {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.story-form label {
+  font-size: 1rem;
+  color: #138808;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.story-form input,
+.story-form select,
+.story-form textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #138808;
+  border-radius: 6px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.story-form input:focus,
+.story-form select:focus,
+.story-form textarea:focus {
+  border-color: #ff9933;
+}
+
+.story-form button {
+  padding: 12px 20px;
+  background-color: #017031;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+  animation: fadeInButton 1s ease-out;
+}
+
+/* Button fade-in animation */
+@keyframes fadeInButton {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.story-form button:hover {
+  background-color: #e64f29;
+}
+
+/* Footer */
+footer {
+  background: #017031;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  animation: fadeInFooter 1s ease-out;
+}
+
+/* Footer fade-in animation */
+@keyframes fadeInFooter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+audio {
+  display: none;
+}

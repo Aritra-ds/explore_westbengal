@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore West Bengal</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Language & Dark Mode Toggle -->
+  <div class="top-controls">
+    <button id="lang-toggle">বাংলা</button>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>EXPLORE WEST BENGAL</h1>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html" target="content-frame">Home</a></li>
+      <li><a href="districts.html" target="content-frame">Districts</a></li>
+      <li><a href="map.html" target="content-frame">Map</a></li>
+      <li><a href="post.html" target="content-frame">Post Your Story</a></li>
+      <li><a href="contact.html" target="content-frame">Contact Us</a></li>
+      
+    </ul>
+  </nav>
+
+  <!-- Introduction -->
+  <section class="intro">
+    <h2>Welcome to Bengal</h2>
+    <p>West Bengal is a land of cultural richness and natural beauty. From the Himalayas in the north to the mangroves of the Sunderbans in the south, it’s a state of contrast and vibrancy.</p>
+  </section>
+
+  <!-- History Section -->
+  <section class="history">
+    <h2>History of West Bengal</h2>
+    <p>West Bengal has a deep-rooted history that dates back to ancient times. It was once part of the Maurya and Gupta empires, and later became a center of British colonial power. Its capital, Kolkata, was formerly the capital of British India.</p>
+  </section>
+
+  <!-- Map Section -->
+  <section class="map-section">
+    <h2>Map of West Bengal</h2>
+    <img src="Geographical-Features-of-West-Bengal.jpg.webp" alt="West Bengal Map" class="wb-map">
+  </section>
+
+
+
+  <!-- Gallery Glances -->
+  <section class="glances">
+    <h2>Glimpses of West Bengal</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="Sundarban_Tiger.jpg" alt="Sundarbans">
+        <p>Sundarbans</p>
+      </div>
+      <div class="gallery-item">
+        <img src="victoria.jpeg" alt="Victoria Memorial">
+        <p>Victoria Memorial</p>
+      </div>
+      <div class="gallery-item">
+        <img src="kalimpong.jpeg" alt="Kalimpong Hills">
+        <p>Kalimpong Hills</p>
+      </div>
+      <div class="gallery-item">
+        <img src="digha.jpeg" alt="Digha Beach">
+        <p>Digha Beach</p>
+      </div>
+      <div class="gallery-item">
+        <img src="Howrah.jpeg" alt="Howrah Bridge">
+        <p>Howrah Bridge</p>
+      </div>
+    </div>
+  </section>
+  
+  </section>
+
+  <!-- Highlighted Districts -->
+  <section class="district-highlights">
+    <h2>Featured Districts</h2>
+    <div class="district-card" onclick="location.href='kolkata.html'">
+      <img src="Kolkata.png" alt="Kolkata">
+      <h3>Kolkata</h3>
+      <p>The cultural capital of India, with colonial architecture and rich heritage.</p>
+      <button>Explore</button>
+    </div>
+    <div class="district-card" onclick="location.href='darjeeling.html'">
+      <img src="darjeeling.jpg" alt="Darjeeling">
+      <h3>Darjeeling</h3>
+      <p>Known as the Queen of Hills, famous for its tea and breathtaking views.</p>
+      <button>Explore</button>
+    </div>
+    <div class="district-card" onclick="location.href='murshidabad.html'">
+      <img src="murshidabad.jpeg" alt="Murshidabad">
+      <h3>Murshidabad</h3>
+      <p>An important historical city with Nawabi heritage and stunning palaces.</p>
+      <button>Explore</button>
+    </div>
+  </section>
+
+  <section id="funfact-section">
+    <h2>Did You Know?</h2>
+    <p id="funfact-text"></p>
+  </section>
+  
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Explore West Bengal | Designed by Aritra Das
+  </footer>
+
+
+  <script>
+    function navigate(page) {
+      document.getElementById("page-frame").src = page;
+    }
+
+    const funFacts = [
+  "West Bengal is home to the largest tree in the world – The Great Banyan Tree at Acharya Jagadish Chandra Bose Indian Botanical Garden.",
+  "The Sundarbans in West Bengal is the largest tidal halophytic mangrove forest in the world.",
+  "Kolkata was the capital of British India until 1911.",
+  "Rabindranath Tagore, the first non-European Nobel Laureate in Literature, was born in Kolkata.",
+  "Darjeeling is known as the ‘Queen of the Hills’ and produces some of the world’s finest tea.",
+  "Shantiniketan was founded by Rabindranath Tagore and is now a UNESCO World Heritage Site.",
+  "The Howrah Bridge is one of the longest cantilever bridges in the world.",
+  "Durga Puja in Kolkata is recognized by UNESCO as an Intangible Cultural Heritage.",
+  "The oldest zoo in India, Alipore Zoo, is located in Kolkata.",
+  "West Bengal has 6 official languages: Bengali, Nepali, Hindi, Urdu, Santali, and Odia.",
+  "Bankim Chandra Chattopadhyay, who composed the national song 'Vande Mataram', was from West Bengal.",
+  "The Royal Bengal Tiger, an iconic species, is native to the Sundarbans.",
+  "The Victoria Memorial in Kolkata is built entirely from white Makrana marble.",
+  "Darjeeling Himalayan Railway is a UNESCO World Heritage Site.",
+  "Kolkata is also known as the City of Joy.",
+  "Kolkata’s tram network is the oldest operating electric tram system in Asia.",
+  "West Bengal has the highest number of literary and cultural events in India.",
+  "The state is the birthplace of Indian cinema legends like Satyajit Ray.",
+  "The Rasgulla sweet is said to have originated in West Bengal.",
+  "Kalighat Temple in Kolkata is one of the 51 Shakti Peethas in India.",
+  "The state bird of West Bengal is the White-throated Kingfisher.",
+  "Sundarbans is the only mangrove forest in the world inhabited by tigers.",
+  "Netaji Subhas Chandra Bose was born in Cuttack but studied and worked in Bengal.",
+  "The second-highest population density in India is in West Bengal.",
+  "The first Indian woman to become a physician, Kadambini Ganguly, was from Kolkata.",
+  "Kolkata has the oldest running football club in Asia – Mohun Bagan (founded 1889).",
+  "The state flower of West Bengal is Sheuli (Night-flowering Jasmine).",
+  "Durga Puja contributes thousands of crores to the state’s economy every year.",
+  "Naxalbari, where the Naxalite movement began, is in northern West Bengal.",
+  "India’s first metro service was launched in Kolkata in 1984.",
+  "The official state animal is the Fishing Cat.",
+  "Birbhum district is known as the ‘Land of Red Soil’.",
+  "Murshidabad was once the capital of Bengal Subah under the Mughals.",
+  "Kolkata has the most number of libraries per capita in India.",
+  "The headquarters of the Missionaries of Charity, founded by Mother Teresa, is in Kolkata.",
+  "Bishnupur is famous for its terracotta temples and Baluchari sarees.",
+  "The first international airport of India was in Dum Dum, Kolkata.",
+  "The state fish of West Bengal is Hilsa (Ilish).",
+  "West Bengal has one of the oldest tiger reserves in India – Sunderban Tiger Reserve.",
+  "Kolkata has a planetarium named after Tagore – Birla Planetarium.",
+  "The Ganges delta begins in West Bengal and is the largest river delta in the world.",
+  "The Ramakrishna Mission, founded by Swami Vivekananda, is headquartered in Belur Math.",
+  "Bengal Renaissance was a major intellectual movement based in Kolkata.",
+  "West Bengal produces the second-highest quantity of rice in India.",
+  "Kolkata has Asia’s second-largest stadium – Salt Lake Stadium.",
+  "The state tree of West Bengal is Chatim (Alstonia Scholaris).",
+  "Cooch Behar Palace is modeled after Buckingham Palace.",
+  "West Bengal has a coastline of 157 km along the Bay of Bengal.",
+  "Mayapur in Nadia is a global center for ISKCON and Gaudiya Vaishnavism.",
+  "The famous writer Bibhutibhushan Bandyopadhyay wrote the classic novel *Pather Panchali* here.",
+  "The annual Kolkata Book Fair is Asia’s largest non-trade book fair.",
+  "Siliguri connects Northeast India to the rest of the country through the ‘Chicken’s Neck’ corridor."
+];
+
+const randomIndex = Math.floor(Math.random() * funFacts.length);
+document.getElementById("funfact-text").textContent = funFacts[randomIndex];
+
+
+  </script>
+</body>
+</html>
+</div>
+
+
+</body>
+</html>

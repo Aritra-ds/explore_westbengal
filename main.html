@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore West Bengal</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden; /* Remove extra scroll */
+    }
+
+    iframe {
+      width: 100%;
+      height: 100vh;
+      border: none;
+    }
+
+    #music-toggle {
+      position: fixed;
+      bottom: 15px;
+      left: 15px;
+      background-color: rgba(255, 255, 255, 0.7);
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 0 8px rgba(0,0,0,0.3);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s ease;
+    }
+
+    #music-toggle:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hidden background music -->
+  <audio id="bg-music" autoplay loop>
+    <source src="Tagore Flute.mp3" type="audio/mp3" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Music Toggle Button -->
+  <button id="music-toggle" title="Play/Pause Music">🔊</button>
+
+  <!-- Iframe to load actual website pages -->
+  <iframe src="index.html" name="content-frame"></iframe>
+
+  <script>
+    const music = document.getElementById("bg-music");
+    const toggleBtn = document.getElementById("music-toggle");
+
+    // Toggle Play/Pause
+    toggleBtn.addEventListener("click", () => {
+      if (music.paused) {
+        music.play();
+        toggleBtn.textContent = "🔊"; // Sound On
+      } else {
+        music.pause();
+        toggleBtn.textContent = "🔇"; // Sound Off
+      }
+    });
+  </script>
+
+</body>
+</html>

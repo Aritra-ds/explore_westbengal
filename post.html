@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post Your Story - Explore West Bengal</title>
+  <link rel="stylesheet" href="post.css" />
+</head>
+<body>
+  <!-- Language Toggle -->
+  <div class="top-controls">
+    <button id="toggleLang">বাংলা</button>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <ul>
+      <li><a href="index.html" target="content-frame">Home</a></li>
+      <li><a href="districts.html" target="content-frame">Districts</a></li>
+      <li><a href="map.html" target="content-frame">Map</a></li>
+      <li><a href="post.html" target="content-frame">Post Your Story</a></li>
+      <li><a href="contact.html" target="content-frame">Contact Us</a></li>
+      
+    </ul>
+  </header>
+
+  <!-- Post Your Story Section -->
+  <section id="post-story-section">
+    <h1>Share Your Story with Us!</h1>
+    <p>Tell us about your favorite district, your travel experiences, or anything that highlights the beauty of West Bengal.</p>
+    <form action="#" method="POST" class="story-form">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+      <label for="district">Select District</label>
+      <select id="district" name="district" required>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Darjeeling">Darjeeling</option>
+        <option value="Murshidabad">Murshidabad</option>
+        <option value="Howrah">Howrah</option>
+        <option value="Siliguri">Siliguri</option>
+        <!-- Add other districts as needed -->
+      </select>
+
+      <label for="story">Your Story</label>
+      <textarea id="story" name="story" rows="6" placeholder="Write your story here..." required></textarea>
+
+      <label for="image">Upload an Image</label>
+      <input type="file" id="image" name="image" accept="image/*" />
+
+      <button type="submit">Submit Story</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Explore West Bengal | Designed by Aritra Das
+  </footer>
+
+  <script src="post.js"></script>
+
+
+</body>
+
+
+
+</html>
